@@ -2,10 +2,8 @@
 #ifndef NETIFACES_BASIC_TYPES_HPP
 #define NETIFACES_BASIC_TYPES_HPP
 
-#include <unordered_map>
-#include <set>
+#include <string>
 #include <vector>
-#include <memory>
 
 namespace netifaces {
     enum class NetworkProto {
@@ -16,14 +14,14 @@ namespace netifaces {
         std::string str_;
         NetworkProto proto_;
     public:
-        NetworkAddress(NetworkProto proto, std::string str) 
+        NetworkAddress(NetworkProto proto, const std::string& str)
             : proto_(proto), str_(str) {}
 
         NetworkProto proto() const {
             return proto_;
         }
 
-        std::string str() const {
+        const std::string& str() const {
             return str_;
         }
     };
@@ -36,20 +34,23 @@ namespace netifaces {
             return addrs_;
         }
 
-        friend class NetworkInterfaceProvider;
     public:
-        NetworkInterface(std::string name) : name_(name), addrs_() {}
+        NetworkInterface(const std::string& name) : name_(name) {}
 
-        std::string name() const {
+        const std::string& name() const {
             return name_;
         }
 
-        const std::vector<NetworkAddress> addrs() const {
+        const std::vector<NetworkAddress>& addrs() const {
             return addrs_;
+        }
+
+        void add(NetworkAddress&& address) {
+            addrs_.push_back(std::move(address));
         }
     };
 
-    using NetworkInterfaces = std::set<std::unique_ptr<NetworkInterface>>;
+    using NetworkInterfaces = std::vector<NetworkInterface>;
 }
 
 #endif

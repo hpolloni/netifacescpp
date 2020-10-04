@@ -8,15 +8,12 @@
 #include "provider.hpp"
 
 namespace netifaces {
-    NetworkInterfaces interfaces() {
-        static NetworkInterfaceProvider provider;
-        NetworkInterfaces result;
-        provider.interfaces(std::move(result));
-        return result;
+    inline NetworkInterfaces interfaces() {
+        return NetworkInterfaceProvider::interfaces();
     }
 }
 
-std::string to_string(const netifaces::NetworkProto& proto) {
+inline std::string to_string(const netifaces::NetworkProto& proto) {
     switch(proto) {
         case netifaces::NetworkProto::IPv4:
             return "IPv4";
@@ -27,7 +24,7 @@ std::string to_string(const netifaces::NetworkProto& proto) {
     }
 }
 
-std::ostream& operator<<(std::ostream& os, const netifaces::NetworkProto& proto) {
+inline std::ostream& operator<<(std::ostream& os, const netifaces::NetworkProto& proto) {
     os << to_string(proto);
     return os;
 }
