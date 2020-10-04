@@ -12,7 +12,7 @@ Just copy the include directory to your project.
 
 # Example usage
 ```cpp
-#include "netifaces.hpp"
+#include "netifaces/netifaces.hpp"
 #include <iostream>
 
 int main(int argc, char** argv) {
@@ -26,8 +26,3 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
-
-# TODO
-* Ethernet support
-* IPv6 support
-* Windows support

@@ -1,5 +1,5 @@
 
-#include "netifaces.hpp"
+#include "netifaces/netifaces.hpp"
 #include <iostream>
 
 int main(int argc, char** argv) {
