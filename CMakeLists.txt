@@ -3,6 +3,7 @@ cmake_minimum_required (VERSION 2.8.11)
 project(netifacescpp)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 
 add_library(netifacescpp INTERFACE)
 target_include_directories(netifacescpp INTERFACE include/)

@@ -7,7 +7,7 @@
 
 namespace netifaces {
     enum class NetworkProto {
-        UNKNOWN, IPv4, IPv6
+        UNKNOWN, IPv4, IPv6, ETHERNET
     };
 
     class NetworkAddress {

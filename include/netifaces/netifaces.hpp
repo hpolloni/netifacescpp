@@ -19,6 +19,8 @@ inline std::string to_string(const netifaces::NetworkProto& proto) {
             return "IPv4";
         case netifaces::NetworkProto::IPv6:
             return "IPv6";
+        case netifaces::NetworkProto::ETHERNET:
+            return "ETHERNET";
         case netifaces::NetworkProto::UNKNOWN:
             return "UNKNOWN";
     }
