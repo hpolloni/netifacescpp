@@ -2,7 +2,7 @@
 A cross-platform header only library to fetch network interfaces. Inspired by https://pypi.org/project/netifaces/
 
 # Goals
-* Compatible with MacOSX, Linux and Windows.
+* Compatible with MacOSX, Linux and Windows. (Windows support TBD)
 * Compatible with C++14.
 * Header-only.
 * No dependencies. 
