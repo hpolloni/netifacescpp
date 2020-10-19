@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2019 - Herman Polloni.
+ * This code is licensed under MIT license (see LICENSE for details)
+ */
 #include "netifaces/netifaces.hpp"
 #include <iostream>
 

@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2019 - Herman Polloni.
+ * This code is licensed under MIT license (see LICENSE for details)
+ */
 #pragma once
 #ifndef NETIFACES_BASIC_TYPES_HPP
 #define NETIFACES_BASIC_TYPES_HPP
