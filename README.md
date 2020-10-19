@@ -26,3 +26,16 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
+
+This will output a list of interfaces in the running machine with their corresponding addresses. Something like:
+```
+en0
+ ETHERNET 8c:85:90:ad:2b:da
+ IPv6 fe80::1cfd:9573:6ddc:e265%en0
+ IPv4 192.168.1.240
+lo0
+ ETHERNET
+ IPv4 127.0.0.1
+ IPv6 ::1
+ IPv6 fe80::1%lo0
+```
