@@ -9,7 +9,11 @@
 #include <string>
 
 #include "basic_types.hpp"
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+#include "win32_provider.hpp"
+#else
 #include "provider.hpp"
+#endif
 
 namespace netifaces {
     inline NetworkInterfaces interfaces() {
